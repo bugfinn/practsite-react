@@ -1,0 +1,29 @@
+@import "tailwindcss";
+:root {
+  --primary-color: #db4444;
+  --secondary-color: #00ff66;
+  --text-color: #000;
+  --text-muted: #7d8184;
+  --bg-color: #fff;
+  --border-color: #e5e5e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+

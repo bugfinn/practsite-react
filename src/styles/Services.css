@@ -1,0 +1,65 @@
+.services {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 70px 135px 140px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 88px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 270px;
+}
+
+.service-icon {
+  margin-bottom: 24px;
+}
+
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-circle::before {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: #000000;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.icon-circle svg {
+  position: relative;
+  z-index: 2;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-family: 'Poppins';
+}
+
+.service-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  font-family: 'Poppins';
+}

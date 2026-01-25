@@ -1,0 +1,31 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-to-top:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.scroll-to-top:hover svg {
+  color: white;
+}
+
+.scroll-to-top svg {
+  color: #000000;
+  transition: color 0.3s;
+}

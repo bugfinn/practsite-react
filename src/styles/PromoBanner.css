@@ -1,0 +1,157 @@
+.promo-banner {
+  padding: 70px 0;
+}
+
+.promo-container {
+
+max-width: 1170px;
+margin: 0px auto;
+padding: 0 135px;
+background: #000000;
+border-radius: 4px;
+display:flex;
+align-items: center;
+justify-content: space-between;
+padding: 69px 56px;
+position: relative;
+overflow: hidden;
+
+}
+
+.promo-content {
+
+color: white;
+max-width: 450px;
+}
+
+.promo-category {
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  display: block;
+  font-family: 'poppins';
+margin-bottom: 32px;
+}
+
+.promo-title {
+
+  font-size: 48px;
+  font-style: 'semi-bold';
+  letter-spacing: 4px;
+  font-family: 'inter';
+  margin-bottom: 32px;
+  font-weight: 600;
+  line-height: 60px;
+
+}
+.promo-timer {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.time-circle {
+  width: 62px;
+  height: 62px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  line-height: 20px;
+  
+}
+
+.time-label {
+  font-size: 11px;
+  font-weight: 400;
+  color: #000;
+  font-family: 'poppins';
+}
+
+.promo-btn {
+  background: #00FF66;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.promo-btn:hover {
+  background: #00cc52;
+}
+
+.promo-image {
+  position: relative;
+}
+
+.promo-image img {
+  max-width: 600px;
+  height: auto;
+  filter: drop-shadow(0 0 100px rgba(217, 217, 217, 0.3));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .promo-container {
+    padding: 50px 40px;
+  }
+  
+  .promo-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  
+  .promo-image img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .promo-container {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+  
+  .promo-content {
+    max-width: 100%;
+  }
+  
+  .promo-timer {
+    justify-content: center;
+  }
+  
+  .promo-image img {
+    max-width: 300px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .time-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .time-value {
+    font-size: 14px;
+  }
+}
