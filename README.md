@@ -1,16 +1,59 @@
-# React + Vite
+# E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive e-commerce home page built with React and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Flash Sales** - Countdown timer with product carousel
+- **Browse by Category** - 6 product categories with icons
+- **Best Selling Products** - Top-rated items showcase
+- **Explore Products** - Full product grid with ratings and colors
+- **New Arrivals** - Featured products in grid layout
+- **Services Section** - Free delivery, 24/7 support, money-back guarantee
+- **Responsive Design** - Mobile-friendly layout
+- **Scroll to Top** - Smooth scroll navigation
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- Vite
+- CSS3 (Custom styling)
+- React Hooks (useState, useEffect)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repository
+git clone https://github.com/bugfinn/practsite-react.git
+
+# Navigate to project directory
+cd practsite-react
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/     # React components
+├── styles/         # CSS files
+├── data/          # Product data
+└── App.jsx        # Main app component
+```
+
+## 🎨 Design Reference
+
+Based on modern e-commerce UI/UX patterns with custom styling.
+
+## 👤 Author
+
+**Affan** - [GitHub](https://github.com/bugfinn)
+
+## 📄 License
+
+This project is open source.
