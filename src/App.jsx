@@ -1,4 +1,5 @@
 // src/App.jsx - Clean version using pages
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import Category from './components/Category'
@@ -9,27 +10,37 @@ import NewArrival from './components/NewArrival'
 import Services from './components/Services'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
-// import Contact from './pages/Contact'  
+import Contact from './pages/Contact'
+import SignUp from './pages/SignUp'  
 import './styles/App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Home />
-       <Category />        {/* Home contains: Sidebar + Hero + Flashsale */}
-      {/* <Contact /> */}  
-     <BestProducts />
-     <PromoBanner />
-     <ExploreProducts />
-     <NewArrival />
-     <Services />
-      <Footer />
-      <ScrollToTop />
-
-     
-    </div>
-    
+    <Router>
+      <div className="App">
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Home />
+              <Category />
+              <BestProducts />
+              <PromoBanner />
+              <ExploreProducts />
+              <NewArrival />
+              <Services />
+            </>
+          } />
+          
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Routes>
+        
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </Router>
   )
 }
 

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import '../styles/Header.css'
 
 function Header(){
@@ -11,17 +12,18 @@ return (
       </p>
     </div>
 
-  
+  {/*  Main Header      */}
     <nav className="header">
       <div className="header-container">
         <div className="logo">
           <h2>Exclusive</h2>
         </div>
+         {/* Navigation      */}
         <div className="nav-menu">
-          <a href="home" className="active">Home</a>
-          <a href="home">Contact</a>
-          <a href="home">About</a>
-          <a href="home">Sign Up</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
         </div>
         <div className="header-right">
           <div className="searching-box">

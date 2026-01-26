@@ -1,0 +1,161 @@
+.contact-page {
+  padding: 80px 0;
+  min-height: 60vh;
+}
+
+.contact-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 80px;
+  color: #666;
+  font-size: 14px;
+}
+
+.breadcrumb span:last-child {
+  color: #000;
+}
+
+/* Main Content Layout */
+.contact-content {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 30px;
+}
+
+/* Left Side - Contact Info */
+.contact-info {
+  background: #fff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.05);
+}
+
+.info-card {
+  margin-bottom: 30px;
+}
+
+.info-card:last-child {
+  margin-bottom: 0;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background: #DB4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.info-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.contact-detail {
+  font-weight: 400;
+}
+
+.divider {
+  height: 1px;
+  background: #0000001a;
+  margin: 32px 0;
+}
+
+/* Right Side - Contact Form */
+.contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  background: #F5F5F5;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background: #e8e8e8;
+}
+
+.contact-form textarea {
+  resize: none;
+  margin-bottom: 32px;
+}
+
+.submit-btn {
+  background: #DB4444;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #c93a3a;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 40px 0;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 40px;
+  }
+  
+  .contact-info,
+  .contact-form {
+    padding: 24px;
+  }
+}
