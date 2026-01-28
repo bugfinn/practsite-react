@@ -13,6 +13,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Contact from './pages/Contact'
 import SignUp from './pages/SignUp'
 import About from './pages/About'  
+import Cart from './components/Cart'
 import './styles/App.css'
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signUp" element={<SignUp />} />
            <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         
         <Footer />

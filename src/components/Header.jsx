@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css'
 
 function Header(){
@@ -47,12 +47,10 @@ return (
                 alt="Wishlist"
               />
             </button>
-            <button className="icon-btn cart-btn">
-              <img
-                src="/images/icons/Cart1 with buy.png"
-                alt="Cart"
-              />
-            </button>
+            <Link to="/cart" className="icon-btn">
+              <img src="/images/icons/Cart1 with buy.png" alt="Cart" />
+              <span className="badge">2</span>
+            </Link>
             <button className="icon-btn user-btn">
               <img src="/images/icons/user.png" alt="User account" />
             </button>
