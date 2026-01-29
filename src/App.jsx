@@ -15,6 +15,7 @@ import SignUp from './pages/SignUp'
 import About from './pages/About'  
 import Cart from './components/Cart'
 import Wishlist from './components/Wishlist'
+
 import './styles/App.css'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
            <Route path="/about" element={<About />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
+       
         </Routes>
         
         <Footer />

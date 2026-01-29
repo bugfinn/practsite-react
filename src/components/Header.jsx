@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css'
+import UserDropdown from './UserDropdown';
 
 function Header(){
 
@@ -51,9 +52,7 @@ return (
               <img src="/images/icons/Cart1 with buy.png" alt="Cart" />
               <span className="badge">2</span>
             </Link>
-            <button className="icon-btn user-btn">
-              <img src="/images/icons/user.png" alt="User account" />
-            </button>
+            <UserDropdown />
           </div>
         </div>
       </div>
