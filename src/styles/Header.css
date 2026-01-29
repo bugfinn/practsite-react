@@ -132,8 +132,8 @@ body {
 }
 
 .search-btn img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 
 }
 
@@ -164,11 +164,13 @@ body {
   border: none;
   cursor: pointer;
   padding: 8px;
+  
 }
 
 .icon-btn img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
+  
 }
 
 .badge {

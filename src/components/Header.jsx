@@ -41,12 +41,12 @@ return (
           </div>
 
           <div className="header-icons">
-            <button className="icon-btn wishlist-btn">
+            <Link to="/wishlist" className="icon-btn wishlist-btn">
               <img
                 src="/images/icons/Wishlist.png"
                 alt="Wishlist"
               />
-            </button>
+            </Link>
             <Link to="/cart" className="icon-btn">
               <img src="/images/icons/Cart1 with buy.png" alt="Cart" />
               <span className="badge">2</span>
