@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/UserDropdown.css';
 
 function UserDropdown() {
@@ -26,12 +27,14 @@ function UserDropdown() {
         <div className="dropdown-menu">
           <ul>
             <li>
-              <img
-                src="/images/icons/user 1.png"
-                className="user-icon"
-                alt=""
-              />
-              <span>Manage My Account</span>
+              <Link to="/account" className="dropdown-link">
+                <img
+                  src="/images/icons/user 1.png"
+                  className="user-icon"
+                  alt=""
+                />
+                <span>Manage My Account</span>
+              </Link>
             </li>
             <li>
               <img src="/images/icons/icon-mallbag.png" alt="" />

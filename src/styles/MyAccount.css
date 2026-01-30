@@ -1,0 +1,273 @@
+.account-page {
+  padding-top: 60px;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.account-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  margin-bottom: 40px;
+  color: #000000;
+  opacity: 0.5;
+  margin-top: 30px;
+}
+
+.breadcrumb a {
+  color: #000000;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.breadcrumb a:hover {
+  opacity: 0.7;
+}
+
+.breadcrumb span:last-child {
+  opacity: 1;
+  font-weight: 400;
+}
+
+/* Welcome Message */
+.welcome-message {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 14px;
+  margin-bottom: 40px;
+  
+}
+
+.welcome-message .user-name {
+  color: #DB4444;
+  font-weight: 500;
+}
+
+/* Account Content Layout */
+.account-content {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 80px;
+}
+
+/* Sidebar */
+.account-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  color: #000000;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-section ul li {
+  font-size: 16px;
+  color: #000000;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: all 0.3s;
+}
+
+.sidebar-section ul li:hover {
+  opacity: 0.8;
+  padding-left: 4px;
+}
+
+.sidebar-section ul li.active {
+  color: #DB4444;
+  opacity: 1;
+  font-weight: 400;
+}
+
+/* Main Content */
+.account-main {
+  background: #ffffff;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #DB4444;
+  margin: 0 0 16px 0;
+}
+
+/* Profile Form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  background: #F5F5F5;
+  border: none;
+  padding: 13px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.form-group input:focus {
+  background: #e8e8e8;
+}
+
+/* Password Section */
+.password-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.password-section label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.password-section input {
+  background: #F5F5F5;
+  border: none;
+  padding: 13px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.password-section input:focus {
+  background: #e8e8e8;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.btn-cancel,
+.btn-save {
+  padding: 16px 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancel {
+  background: transparent;
+  color: #000000;
+}
+
+.btn-cancel:hover {
+  color: #666666;
+}
+
+.btn-save {
+  background: #DB4444;
+  color: #ffffff;
+}
+
+.btn-save:hover {
+  background: #c93939;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .account-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .account-main {
+    padding: 30px 40px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-page {
+    padding: 40px 0;
+  }
+
+  .breadcrumb {
+    margin-bottom: 40px;
+  }
+
+  .welcome-message {
+    margin-bottom: 40px;
+  }
+
+  .account-main {
+    padding: 20px;
+  }
+
+  .form-actions {
+    gap: 12px;
+  }
+}
