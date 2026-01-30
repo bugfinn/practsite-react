@@ -153,7 +153,11 @@ function Cart() {
                   <span>Total:</span>
                   <span>${calculateTotal()}</span>
                 </div>
-                <button className="checkout-btn">Procees to checkout</button>
+                <button className="checkout-btn">
+                  <Link to="/checkout" style={{ color: 'inherit', textDecoration: 'none' }}>
+                    Procees to checkout
+                  </Link>
+                </button>
               </div>
             </div>
           </>

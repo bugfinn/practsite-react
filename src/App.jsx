@@ -16,6 +16,7 @@ import About from './pages/About'
 import Cart from './components/Cart'
 import Wishlist from './components/Wishlist'
 import MyAccount from './components/MyAccount'
+import Checkout from './components/Checkout'
 
 import './styles/App.css'
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/account" element={<MyAccount />} />
+          <Route path="/checkout" element={<Checkout />} />
        
         </Routes>
         
