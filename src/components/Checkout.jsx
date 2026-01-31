@@ -49,13 +49,11 @@ function Checkout() {
   const handlePlaceOrder = (e) => {
     e.preventDefault();
     // Handle order placement logic
-    console.log('Order placed:', { billingDetails, paymentMethod, cartItems });
     alert('Order placed successfully!');
   };
 
   const handleApplyCoupon = () => {
-    // Handle coupon logic
-    console.log('Applying coupon:', couponCode);
+   
   };
 
   return (

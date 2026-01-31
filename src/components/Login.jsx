@@ -5,7 +5,7 @@ function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login submitted');
+   
   };
 
   return (
