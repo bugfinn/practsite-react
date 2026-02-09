@@ -179,9 +179,7 @@ body {
   display: none;
 }
 
-/* ============================================ */
-/* RESPONSIVE MEDIA QUERIES */
-/* ============================================ */
+
 
 /* Large Desktop - 1200px and below */
 @media (max-width: 1200px) {
@@ -289,9 +287,15 @@ body {
   }
 
   .header-container {
-    flex-wrap: nowrap; /* Changed from wrap to nowrap */
+    flex-wrap: nowrap;
     padding: 0 20px;
     gap: 12px;
+  }
+
+  /* Hide user dropdown only when menu is open */
+  .menu-overlay.active ~ .header-right .user-dropdown,
+  body:has(.nav-menu.active) .user-dropdown {
+    display: none;
   }
 
   /* Row 1: Logo + Search + Hamburger + Icons */
