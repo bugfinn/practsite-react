@@ -76,7 +76,7 @@ const Header = () => {
             </div>
 
             <div className="header-icons">
-              <button className="icon-btn wishlist-btn">
+              <button className="icon-btn wishlist-btn" onClick={() => navigate('/wishlist')}>
                 <img src={wishlistIcon} alt="Wishlist" />
               </button>
               <button className="icon-btn cart-btn" onClick={() => navigate('/cart')}>
