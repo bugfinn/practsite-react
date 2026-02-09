@@ -1,4 +1,4 @@
-import'../styles/Bestproducts.css';
+import'../styles/BestProducts.css';
 
 const bestSellingProducts = [
 {
