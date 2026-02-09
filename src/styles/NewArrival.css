@@ -64,7 +64,7 @@ grid-column: 1;
   grid-row: 1;
   grid-column: 2;
 }
-/* Create a container for speakers and perfume */
+
 .bottom-right {
   grid-row: 2;
   grid-column: 2;
@@ -81,56 +81,223 @@ grid-column: 1;
 }
 
 .arrival-card {
+  position: relative;
+  background: #0d0d0d;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-position: relative;
-background: #000000;
-border-radius: 4px;
-overflow: hidden;
-display: flex;
-align-items: flex-end;
-justify-content: flex-start;
-padding: 0;
-
-
+.arrival-card:hover {
+  transform: scale(1.02);
 }
 
 .arrival-card img {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
+
+/* Fix text overlay positioning */
 .card-content {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 32px;
-  color:#FAFAFA;
-  width: 100%;
+  color: #fafafa;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
 }
+
 .card-content h3 {
   font-size: 24px;
   font-weight: 600;
-  font-style: 'inter';
   letter-spacing: 3px;
-
-
+  margin-bottom: 8px;
+  color: #fafafa;
 }
-.card-content p {
-font-size: 14px;
-font-weight: 400;
-font-family: 'poppins';
-opacity: 0.9;
-margin-bottom: 16px;
 
+.card-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: #fafafa;
+  opacity: 0.9;
 }
 
 .shop-btn {
-  background: transparent;
-  color: #FFFFFF;
-  font-weight: 500;
+  display: inline-block;
+  color: #ffffff;
   font-size: 16px;
-  cursor: pointer;
+  font-weight: 500;
   text-decoration: underline;
   border: none;
+  background: none;
+  cursor: pointer;
   padding: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shop-btn:hover {
+  opacity: 0.8;
+}
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .new-arrival {
+    padding: 50px 40px;
+  }
+
+  .arrival-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .arrival-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .ps5 {
+    grid-row: auto;
+    grid-column: auto;
+    height: 350px; 
+  }
+
+  .women {
+    grid-row: auto;
+    grid-column: auto;
+    height: 280px; 
+  }
+
+  .bottom-right {
+    grid-row: auto;
+    grid-column: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .speakers,
+  .perfume {
+    width: 100%;
+    height: 240px; 
+  }
+
+  .card-content {
+    padding: 28px;
+  }
+
+  .card-content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .shop-btn {
+    font-size: 15px;
+    padding: 2px 0;
+  }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+  .new-arrival {
+    padding: 40px 15px;
+  }
+
+  .arrival-header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .red-rectangle {
+    width: 16px;
+    height: 32px;
+  }
+
+  .arrival-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .arrival-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .arrival-grid {
+    gap: 16px;
+  }
+
+  .ps5 {
+    height: 300px;
+  }
+
+  .women {
+    height: 250px;
+  }
+
+  .speakers,
+  .perfume {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+
+  .card-content h3 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .shop-btn {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+/* Extra small - 360px and below */
+@media (max-width: 360px) {
+  .ps5 {
+    height: 260px;
+  }
+
+  .women {
+    height: 220px;
+  }
+
+  .speakers,
+  .perfume {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+  }
 }

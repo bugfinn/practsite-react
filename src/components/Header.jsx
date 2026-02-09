@@ -1,8 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/Header.css'
 import UserDropdown from './UserDropdown';
 
 function Header(){
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
 return (
 <>
@@ -20,12 +30,17 @@ return (
           <h2>Exclusive</h2>
         </div>
          {/* Navigation      */}
-        <div className="nav-menu">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/signUp">Sign Up</NavLink>
+        <div className={`nav-menu ${menuOpen ? 'active' : ''}`}>
+          <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+          <NavLink to="/signUp" onClick={closeMenu}>Sign Up</NavLink>
         </div>
+        
+        <button className="menu-toggle" onClick={toggleMenu}>
+          {menuOpen ? '✕' : '☰'}
+        </button>
+
         <div className="header-right">
           <div className="searching-box">
             <input

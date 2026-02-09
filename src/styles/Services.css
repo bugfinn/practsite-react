@@ -63,3 +63,109 @@
   color: var(--text-color);
   font-family: 'Poppins';
 }
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .services {
+    padding: 50px 40px 80px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .service-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-description {
+    font-size: 13px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+  .services {
+    padding: 40px 15px 60px;
+  }
+
+  .services-container {
+    gap: 40px;
+  }
+
+  .service-card {
+    max-width: 280px;
+  }
+
+  .service-icon {
+    margin-bottom: 20px;
+  }
+
+  .icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-circle::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-circle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-title {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .service-description {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+/* Extra small - 360px and below */
+@media (max-width: 360px) {
+  .services {
+    padding: 35px 15px 50px;
+  }
+
+  .services-container {
+    gap: 35px;
+  }
+
+  .icon-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-circle::before {
+    width: 46px;
+    height: 46px;
+  }
+
+  .icon-circle svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-title {
+    font-size: 16px;
+  }
+
+  .service-description {
+    font-size: 11px;
+  }
+}

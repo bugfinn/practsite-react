@@ -193,11 +193,91 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Add responsive behavior */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 30px;
     padding: 40px 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  /* Make "Download App" span full width at bottom */
+  .footer-section:last-child {
+    grid-column: 1 / -1; /* Full width */
+  }
+
+  .input-area {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+}
+
+/* Mobile - still 2 columns but smaller */
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns */
+    gap: 25px;
+    padding: 30px 15px;
+  }
+
+  .footer-title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .footer-subtitle {
+    font-size: 14px;
+  }
+
+  .footer-text,
+  .footer-links a,
+  .footer-contact {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .input-area {
+    max-width: 100%;
+  }
+
+  .footer-input {
+    font-size: 13px;
+    padding: 10px 8px 10px 12px;
+  }
+
+  .subscribe-btn {
+    padding: 6px 10px;
+  }
+
+  /* Download App section - full width */
+  .footer-section:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .app-download {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .qr-code img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-links {
+    gap: 18px;
+    justify-content: center;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    padding: 0 15px;
   }
 }

@@ -1,5 +1,3 @@
-
-
 .category-all {
 
 border-bottom: 1px solid #e5e5e5;
@@ -134,4 +132,172 @@ transition: background 0.3s, border-color 0.3s;
 font-weight: 400;
 font-size: 16px;
 color: var(--text-color);
+}
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .category-all {
+    padding: 50px 40px;
+  }
+
+  .category-header {
+    margin-bottom: 40px;
+  }
+
+  .redd-rectangle {
+    width: 16px;
+    height: 32px;
+  }
+
+  .category-subtitle {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .section-title-row {
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .navigation-arrows {
+    margin-left: 0;
+  }
+
+  .nav-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .category-container {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .phone-categ {
+    min-width: 150px;
+    height: 130px;
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .phone-categ img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .categories-names {
+    font-size: 15px;
+  }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+  .category-all {
+    padding: 40px 15px;
+  }
+
+  .category-header {
+    margin-bottom: 30px;
+  }
+
+  .category-indicator {
+    gap: 12px;
+  }
+
+  .redd-rectangle {
+    width: 14px;
+    height: 28px;
+  }
+
+  .category-subtitle {
+    font-size: 13px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 1px;
+  }
+
+  .section-title-row {
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .navigation-arrows {
+    align-self: flex-end;
+  }
+
+  .nav-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .category-container {
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .phone-categ {
+    min-width: calc(50% - 8px);
+    flex: 0 0 calc(50% - 8px);
+    height: 120px;
+    padding: 20px 10px;
+    gap: 16px;
+  }
+
+  .phone-categ img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .categories-names {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Extra small - 360px and below */
+@media (max-width: 360px) {
+  .category-all {
+    padding: 35px 12px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .phone-categ {
+    min-width: calc(50% - 8px);
+    height: 110px;
+    padding: 18px 8px;
+    gap: 14px;
+  }
+
+  .phone-categ img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .categories-names {
+    font-size: 13px;
+  }
+
+  .nav-arrow {
+    width: 36px;
+    height: 36px;
+  }
 }

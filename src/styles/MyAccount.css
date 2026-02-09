@@ -271,3 +271,277 @@
     gap: 12px;
   }
 }
+
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .account-page {
+    padding-top: 40px;
+  }
+
+  .account-container {
+    padding: 0 40px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .welcome-message {
+    font-size: 13px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+  }
+
+  .account-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Make sidebar horizontal on tablet */
+  .account-sidebar {
+    flex-direction: row;
+    gap: 40px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .sidebar-section {
+    min-width: 200px;
+  }
+
+  .sidebar-section h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .sidebar-section ul li {
+    font-size: 14px;
+  }
+
+  .account-main {
+    padding: 30px 40px;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .password-section label {
+    font-size: 15px;
+  }
+
+  .password-section input {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  .form-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    flex: 1;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile - 480px and below */
+@media (max-width: 480px) {
+  .account-page {
+    padding-top: 30px;
+  }
+
+  .account-container {
+    padding: 0 15px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 24px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .welcome-message {
+    font-size: 12px;
+    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .account-content {
+    gap: 24px;
+  }
+
+  /* Stack sidebar vertically on mobile */
+  .account-sidebar {
+    flex-direction: column;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .sidebar-section {
+    min-width: auto;
+  }
+
+  .sidebar-section h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-section ul {
+    gap: 6px;
+  }
+
+  .sidebar-section ul li {
+    font-size: 13px;
+    padding: 6px 0;
+  }
+
+  .account-main {
+    padding: 20px 16px;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  .form-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .profile-form {
+    gap: 20px;
+  }
+
+  .form-row {
+    gap: 16px;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .password-section label {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .password-section input {
+    padding: 11px 12px;
+    font-size: 14px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Extra small - 360px and below */
+@media (max-width: 360px) {
+  .account-page {
+    padding-top: 25px;
+  }
+
+  .account-container {
+    padding: 0 12px;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+    gap: 8px;
+  }
+
+  .welcome-message {
+    font-size: 11px;
+  }
+
+  .account-sidebar {
+    padding: 16px;
+  }
+
+  .sidebar-section h3 {
+    font-size: 13px;
+  }
+
+  .sidebar-section ul li {
+    font-size: 12px;
+  }
+
+  .account-main {
+    padding: 16px 12px;
+  }
+
+  .form-title {
+    font-size: 16px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .password-section label {
+    font-size: 13px;
+  }
+
+  .password-section input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn-cancel,
+  .btn-save {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+}
