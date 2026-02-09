@@ -24,7 +24,7 @@ return (
           <NavLink to="/">Home</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/signup">Sign Up</NavLink>
+          <NavLink to="/signUp">Sign Up</NavLink>
         </div>
         <div className="header-right">
           <div className="searching-box">
