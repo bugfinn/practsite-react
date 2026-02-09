@@ -164,24 +164,23 @@ body {
   font-weight: 500;
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu Toggle - Hidden on desktop */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  font-size: 24px;
-  color: #000;
 }
 
-.menu-toggle img {
-  width: 24px;
-  height: 24px;
+/* Menu Close Button - Hidden on desktop */
+.menu-close {
+  display: none;
+}
+
+/* Menu Overlay - Hidden on desktop */
+.menu-overlay {
+  display: none;
 }
 
 /* ============================================ */
-/* RESPONSIVE MEDIA QUERIES - ONE COMPLETE SET */
+/* RESPONSIVE MEDIA QUERIES */
 /* ============================================ */
 
 /* Large Desktop - 1200px and below */
@@ -348,16 +347,15 @@ body {
   .searching-box {
     order: 3;
     flex: 1 1 auto;
-    max-width: none;
+    max-width: calc(100% - 50px);
+    min-width: 150px;
     width: auto;
-    min-width: 0;
     padding: 8px 12px;
     margin: 0;
   }
 
   .search-input {
     width: 100%;
-    min-width: 100px;
     font-size: 14px;
   }
 
@@ -375,9 +373,13 @@ body {
     display: flex;
     order: 4;
     margin-left: 8px;
-    padding: 8px;
     flex-shrink: 0;
-    align-self: flex-start;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    position: relative;
+    z-index: 1002;
   }
 
   .menu-toggle img {
@@ -385,33 +387,104 @@ body {
     height: 24px;
   }
 
-  /* Mobile Menu Dropdown */
-  .nav-menu {
+  .menu-toggle.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Overlay background when menu is open */
+  .menu-overlay {
     display: none;
     position: fixed;
-    top: 120px;
+    top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
+
+  /* Side slide menu */
+  .nav-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
     background: white;
     flex-direction: column;
     gap: 0;
-    padding: 16px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 80px 0 20px 0;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
   }
 
   .nav-menu.active {
-    display: flex;
+    right: 0;
   }
 
   .nav-menu a {
-    padding: 14px 0;
-    border-bottom: 1px solid #e5e5e5;
-    font-size: 15px;
+    padding: 18px 30px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    transition: background 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .nav-menu a:hover {
+    background: #f5f5f5;
+    border-bottom-color: #f0f0f0;
+    border-left-color: #db4444;
+  }
+
+  .nav-menu a.active {
+    border-left-color: #db4444;
+    background: #fef5f5;
   }
 
   .nav-menu a:last-child {
     border-bottom: none;
+  }
+
+  /* Close button inside menu */
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .menu-close img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-close:hover {
+    opacity: 0.7;
   }
 }
 
@@ -426,90 +499,118 @@ body {
   }
 
   .searching-box {
+    max-width: calc(100% - 45px);
+    min-width: 120px;
     padding: 7px 10px;
   }
 
   .search-input {
     font-size: 13px;
-    min-width: 80px;
+  }
+
+  .search-btn img {
+    width: 16px;
+    height: 16px;
   }
 
   .menu-toggle {
     margin-left: 6px;
   }
 
+  .menu-toggle img {
+    width: 22px;
+    height: 22px;
+  }
+
   .nav-menu {
-    top: 115px;
+    width: 260px;
   }
 }
 
 /* Mobile - 480px and below */
 @media (max-width: 480px) {
-   .header-container {
-    padding: 0 12px;
-    gap: 8px;
+  .header-container {
+    padding: 0 15px;
+    gap: 10px;
   }
 
   .logo h2 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .header-right {
-    gap: 8px;
+    gap: 10px;
   }
 
   .header-icons {
-    gap: 8px;
+    gap: 10px;
   }
 
   .icon-btn {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
   }
 
   .icon-btn img {
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
   }
 
   .wishlist-btn img[alt="Wishlist"] {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-btn img[alt="Cart"] {
     width: 21px;
     height: 21px;
   }
 
-  .icon-btn img[alt="Cart"] {
-    width: 20px;
-    height: 20px;
-  }
-
   .badge {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     font-size: 8px;
+    top: -5px;
+    right: -5px;
   }
 
   .searching-box {
-    padding: 6px 8px;
+    max-width: calc(100% - 45px);
+    min-width: 100px;
+    padding: 7px 10px;
   }
 
   .search-input {
-    font-size: 12px;
-    min-width: 70px;
+    font-size: 13px;
   }
 
   .search-btn img {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .menu-toggle {
+    padding: 6px;
   }
 
   .menu-toggle img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-menu {
+    width: 240px;
+    padding: 70px 0 20px 0;
+  }
+
+  .nav-menu a {
+    padding: 16px 24px;
+    font-size: 15px;
   }
 }
 
-/* Mobile Small - 300px and below */
-@media (min-width: 300px) {
+/* Mobile Small - 400px and below */
+@media (max-width: 400px) {
   .header-container {
     padding: 0 12px;
     gap: 8px;
@@ -554,12 +655,13 @@ body {
   }
 
   .searching-box {
+    max-width: calc(100% - 40px);
+    min-width: 80px;
     padding: 6px 8px;
   }
 
   .search-input {
     font-size: 12px;
-    min-width: 70px;
   }
 
   .search-btn img {
@@ -571,5 +673,71 @@ body {
     width: 20px;
     height: 20px;
   }
+
+  .nav-menu {
+    width: 220px;
+  }
 }
 
+/* Mobile Extra Small - 360px and below */
+@media (max-width: 360px) {
+  .header-container {
+    padding: 0 10px;
+  }
+
+  .logo h2 {
+    font-size: 16px;
+  }
+
+  .header-icons {
+    gap: 6px;
+  }
+
+  .icon-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .wishlist-btn img[alt="Wishlist"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-btn img[alt="Cart"] {
+    width: 19px;
+    height: 19px;
+  }
+
+  .searching-box {
+    max-width: calc(100% - 38px);
+    min-width: 70px;
+    padding: 6px 8px;
+  }
+
+  .search-input {
+    font-size: 11px;
+  }
+
+  .menu-toggle {
+    margin-left: 4px;
+  }
+
+  .menu-toggle img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-menu {
+    width: 200px;
+  }
+
+  .nav-menu a {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
