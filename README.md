@@ -1,10 +1,13 @@
 # Exclusive - E-commerce Website
 
+
 A pixel-perfect e-commerce website built with React, replicating a professional Figma design with exact precision.
 
 ## 🎯 Project Overview
 
 This project is a **pixel-to-pixel implementation** of an e-commerce website design from Figma. Every element, spacing, color, and interaction has been carefully crafted to match the original design specifications.
+
+⚠️ **Disclaimer:** This is a **practice/portfolio project** — a pixel-perfect clone of a Figma design. It is a static frontend with no real backend, payments, or authentication. No products are actually for sale.
 
 ## ✨ Features
 
@@ -78,25 +81,10 @@ This project emphasizes:
 - **Reusability**: Modular and maintainable components
 - **Best Practices**: Following React and CSS conventions
 
-## 📸 Screenshots
+## 📸 Live Demo
 
-### Home Page
-![Home Page](screenshots/home.png)
+🔗 **[View Live Site](https://practsite-react-wu57.vercel.app)**
 
-### Contact Page
-![Contact Page](screenshots/contact.png)
-
-### Sign Up Page
-![Sign Up Page](screenshots/signup.png)
-
-## 🚀 Future Enhancements
-
-- [ ] Add About page
-- [ ] Implement shopping cart functionality
-- [ ] Add product detail pages
-- [ ] Integrate payment gateway
-- [ ] Add user authentication
-- [ ] Implement wishlist feature
 
 ## 👨‍💻 Author
 
