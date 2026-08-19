@@ -1,4 +1,4 @@
-# Exclusive - E-commerce Website
+# Exclusive - Figma-to-Code E-Commerce Landing Page
 
 
 A pixel-perfect e-commerce website built with React, replicating a professional Figma design with exact precision.
